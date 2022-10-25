@@ -32,3 +32,25 @@ if (userScore > pcScore) {
 }  else {
    alert(`Hai pareggiato ${userScore} a ${pcScore}`);
 }
+
+
+// Gioco 3
+const userArr = [];
+const pcArr = [];
+let userArrScore = 0;
+let pcArrScore = 0;
+
+for (let i = 0; i < Math.floor(Math.random() * 100 + 1); i++) {
+   userArr.push(Math.floor(Math.random() * 100 + 1));
+   pcArr.push(Math.floor(Math.random() * 100 + 1));
+   userArrScore += userArr[i];
+   pcArrScore += pcArr[i];
+}
+
+if (userArrScore > pcArrScore) {
+   alert(`Hai vinto con array score ${userArrScore} a ${pcArrScore}`);
+} else if (userArrScore < pcArrScore) {
+   alert(`Hai perso con array score ${pcArrScore} a ${userArrScore}`);
+}  else {
+   alert(`Hai pareggiato con array score ${userArrScore} a ${pcArrScore}`);
+}
