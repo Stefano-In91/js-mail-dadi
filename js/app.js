@@ -19,3 +19,16 @@ if (mailPositive) {
 } else {
    alert("Mail non presente nell'elenco");
 }
+
+
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+const userScore = Math.floor(Math.random() * 6 + 1);
+const pcScore = Math.floor(Math.random() * 6 + 1);
+// Stabilire il vincitore, in base a chi fa il punteggio più alto.
+if (userScore > pcScore) {
+   alert(`Hai vinto ${userScore} a ${pcScore}`);
+} else if (userScore < pcScore) {
+   alert(`Hai perso ${pcScore} a ${userScore}`);
+}  else {
+   alert(`Hai pareggiato ${userScore} a ${pcScore}`);
+}
