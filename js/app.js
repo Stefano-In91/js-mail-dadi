@@ -2,14 +2,18 @@
 
 // Chiedi all’utente la sua email,
 const userMail = prompt("Inserisci la tua mail");
-// controlla che sia nella lista di chi può accedere,
+// Lista Mail
 const mailList = ["salaffepihei-7838@yopmail.com", "jugrouyigattou-5273@yopmail.com", "lijubroceucre-9536@yopmail.com", "jutrocaddoummoi-8133@yopmail.com", "stefano.incerti91@gmail.com"];
+// Aggiunge casualmente la tua mail alla mailList
+if (Math.random() >= Math.random()) {
+   mailList.push(userMail);
+}
+// Controllo
 const listLength = mailList.length;
 let mailPositive;
 
 for (let i = 0; i < listLength; i++) {
-   const element = mailList[i];
-   if (element === userMail) {     
+   if (mailList[i] === userMail) {     
       mailPositive = true;
    }
 }
@@ -17,6 +21,12 @@ for (let i = 0; i < listLength; i++) {
 if (mailPositive) {
    alert("La tua mail è nell'elenco");
 } else {
+   alert("Mail non presente nell'elenco");
+}
+// Oppure
+if (mailList.includes(userMail)) {
+   alert("La tua mail è nell'elenco");
+   } else {
    alert("Mail non presente nell'elenco");
 }
 
